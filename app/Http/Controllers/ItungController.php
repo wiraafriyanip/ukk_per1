@@ -40,7 +40,21 @@ class ItungController extends Controller
         $op=$request->op;
 
         if(op=='Tambahkan'){
-            $hasil=$a+$b;
+            $hasil=$bil1+$bil2;
+        }
+        elseif(op=='Kurangkan'){
+            $hasil=$bil1-$bil2;
+        }
+        elseif(op=='Kalikan'){
+            $hasil=$bil1*$bil2;
+        }
+        elseif(op=='Reset'){
+            $bil1=0;
+            $bil2=0;
+            $hasil=0;
+        }
+        elseif(op=='Bagikan'){
+            
         }
         
 
