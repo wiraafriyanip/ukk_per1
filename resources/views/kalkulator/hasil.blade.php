@@ -25,7 +25,7 @@
             <input type="submit" value="Bagikan" name="op">
             <input type="submit" value="Reset" name="op">
         </form>
-
+        <h1>HASIL : {{$hasil}}</h1>
     </div>
 </body>
 </html>
