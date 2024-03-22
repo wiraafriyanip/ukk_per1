@@ -54,8 +54,15 @@ class ItungController extends Controller
             $hasil=0;
         }
         elseif(op=='Bagikan'){
+            if($b!=0){
+                $hasil=$bil1/$bil2;
+            }
+            else{
+                $hasil="TIDAK BOLEH MELAKUKAN PEMBAGIAN DENGAN NOL^^";
+            }
             
         }
+        return view('kalkulator.hasil'. compact('hasil'));
         
 
 
