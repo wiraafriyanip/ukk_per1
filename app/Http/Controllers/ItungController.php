@@ -39,21 +39,21 @@ class ItungController extends Controller
         $bil2=$request->bil2;
         $op=$request->op;
 
-        if(op=='Tambahkan'){
+        if($op=='Tambahkan'){
             $hasil=$bil1+$bil2;
         }
-        elseif(op=='Kurangkan'){
+        elseif($op=='Kurangkan'){
             $hasil=$bil1-$bil2;
         }
-        elseif(op=='Kalikan'){
+        elseif($op=='Kalikan'){
             $hasil=$bil1*$bil2;
         }
-        elseif(op=='Reset'){
+        elseif($op=='Reset'){
             $bil1=0;
             $bil2=0;
             $hasil=0;
         }
-        elseif(op=='Bagikan'){
+        elseif($op=='Bagikan'){
             if($b!=0){
                 $hasil=$bil1/$bil2;
             }
@@ -62,7 +62,7 @@ class ItungController extends Controller
             }
             
         }
-        return view('kalkulator.hasil'. compact('hasil'));
+        return view('kalkulator.hasil', compact('hasil'));
         
 
 
